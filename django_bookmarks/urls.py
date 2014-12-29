@@ -7,5 +7,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'django_bookmarks.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     (r'^$', main_page),
+    (r'^user/(\w+)/$', user_page),
+    (r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^admin/', include(admin.site.urls)),
 )
